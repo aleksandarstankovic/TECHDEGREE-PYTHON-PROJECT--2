@@ -203,14 +203,14 @@ def start():
                 panthers_dict = []
                 team_height = []
                 team_experienced = []
-                guardians = [] 
+                joint_guardians_split = []
                 num=0
                 for item in sliced_and_joined_players:
                     player_name = item["name"] 
                     player_guardians = item["guardians"]
-                    player_guardians_split = player_guardians.split()
-                    guardians.append(player_guardians)
-                    guardians_string = " , ".join(guardians)
+                    player_guardians_split = player_guardians.split("and")
+                    joint_guardians_split.extend(player_guardians_split)
+                    joint_guardians_join = " , ".join(joint_guardians_split)
                     player_experience = item["experience"]
                     if "YES" in player_experience:
                         player_experience = True
@@ -224,7 +224,7 @@ def start():
                     num +=1    
                 panthers_inline = " , ".join(panthers)
                 print("Player's Guardians :") 
-                print(guardians_string)
+                print(joint_guardians_join)
                 time.sleep(1)
                 print_experience(team_experienced)
                 average_height = sum(team_height) / len(sliced_and_joined_players)
@@ -275,14 +275,14 @@ For more info about the each player, type player's name :
                 bandits_dict = []
                 team_height = []
                 team_experienced = []
-                guardians = []
+                joint_guardians_split = []
                 num =0
                 for item in PLAYERS[3:9]:
                     player_name = item["name"]
                     player_guardians = item["guardians"]
-                    player_guardians_split = player_guardians.split()
-                    guardians.append(player_guardians)
-                    guardians_string = " , ".join(guardians)
+                    player_guardians_split = player_guardians.split("and")
+                    joint_guardians_split.extend(player_guardians_split)
+                    joint_guardians_join = " , ".join(joint_guardians_split)
                     player_experience = item["experience"]
                     if "YES" in player_experience:
                         player_experience = True
@@ -296,7 +296,7 @@ For more info about the each player, type player's name :
                     num +=1         
                 bandits_inline = " , ".join(bandits) 
                 print("Player's Guardians :") 
-                print(guardians_string)
+                print(joint_guardians_join)
                 time.sleep(1)
                 print_experience(team_experienced)
                 average_height = sum(team_height) / len(PLAYERS[3:9])
@@ -348,14 +348,14 @@ For more info about the each player, type player's name :
                 warriors_dict = []
                 team_height = []
                 team_experienced = []
-                guardians = []
+                joint_guardians_split = []
                 num =0
                 for item in PLAYERS[12:]:
                     player_name = item["name"]
                     player_guardians = item["guardians"]
-                    player_guardians_split = player_guardians.split()
-                    guardians.append(player_guardians)
-                    guardians_string = " , ".join(guardians)
+                    player_guardians_split = player_guardians.split("and")
+                    joint_guardians_split.extend(player_guardians_split)
+                    joint_guardians_join = " , ".join(joint_guardians_split)
                     player_experience = item["experience"]
                     if "YES" in player_experience:
                         player_experience = True
@@ -369,7 +369,7 @@ For more info about the each player, type player's name :
                     num +=1     
                 warriors_inline = " , ".join(warriors) 
                 print("Player's Guardians :") 
-                print(guardians_string)
+                print(joint_guardians_join)
                 time.sleep(1)
                 print_experience(team_experienced)
                 average_height = sum(team_height) / len(PLAYERS[6:12])
