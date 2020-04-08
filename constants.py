@@ -191,20 +191,21 @@ def start():
         else:
             time.sleep(1)    
             if input_teams == 1: # --------------here starts the PANTHERS team statistics-------------------
+                sliced_and_joined_players = PLAYERS[:3] + PLAYERS[8:11]
                 print("""
 
                 Team {} Stats:
                 --------------------
                 Total players : {}
 
-                """.format(TEAMS[0],len(PLAYERS[:6])))   
+                """.format(TEAMS[0],len(sliced_and_joined_players)))   
                 panthers = []
                 panthers_dict = []
                 team_height = []
                 team_experienced = []
                 guardians = [] 
                 num=0
-                for item in PLAYERS[:6]:
+                for item in sliced_and_joined_players:
                     player_name = item["name"] 
                     player_guardians = item["guardians"]
                     player_guardians_split = player_guardians.split()
@@ -226,7 +227,7 @@ def start():
                 print(guardians_string)
                 time.sleep(1)
                 print_experience(team_experienced)
-                average_height = sum(team_height) / len(PLAYERS[:6])
+                average_height = sum(team_height) / len(sliced_and_joined_players)
                 average_height = round(average_height,1)
                 time.sleep(1)
                 print("""Average height of the team: {} inches.
@@ -269,14 +270,14 @@ For more info about the each player, type player's name :
                 --------------------
                 Total players : {}
 
-                """.format(TEAMS[1],len(PLAYERS[6:12]))) 
+                """.format(TEAMS[1],len(PLAYERS[3:9]))) 
                 bandits = []
                 bandits_dict = []
                 team_height = []
                 team_experienced = []
                 guardians = []
                 num =0
-                for item in PLAYERS[6:12]:
+                for item in PLAYERS[3:9]:
                     player_name = item["name"]
                     player_guardians = item["guardians"]
                     player_guardians_split = player_guardians.split()
@@ -298,7 +299,7 @@ For more info about the each player, type player's name :
                 print(guardians_string)
                 time.sleep(1)
                 print_experience(team_experienced)
-                average_height = sum(team_height) / len(PLAYERS[6:12])
+                average_height = sum(team_height) / len(PLAYERS[3:9])
                 average_height = round(average_height,1)
                 time.sleep(1)
                 print("""Average height of the team: {} inches.
