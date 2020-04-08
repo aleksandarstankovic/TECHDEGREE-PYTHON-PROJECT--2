@@ -1,4 +1,5 @@
 import sys
+import time
 
 def average_height(average_height):
     print("""Average height of the team: {} inches.
@@ -26,6 +27,7 @@ def print_experience(team_experienced):
     Number of experinced players:   {} 
     Number of inexperinced players: {}
     """.format(team_experienced.count(True),team_experienced.count(False)))
+    
 
 
 def search_again():
@@ -184,7 +186,8 @@ def start():
             """)
             else:
                 print(error)
-        else:    
+        else:
+            time.sleep(1)    
             if input_teams == 1: # --------------here starts the PANTHERS team statistics-------------------
                 print("""
 
@@ -212,16 +215,20 @@ def start():
                     panthers_dict.insert(num, player_stats )
                     num +=1    
                 panthers_inline = " , ".join(panthers) 
+                time.sleep(1)
                 print_experience(team_experienced)
                 average_height = sum(team_height) / len(PLAYERS[:6])
                 average_height = round(average_height,1)
+                time.sleep(1)
                 print("""Average height of the team: {} inches.
                 """.format(average_height))
+                time.sleep(1)
                 player_on_team()
+                time.sleep(1)
                 print("***",panthers_inline,"***")
                 input_player = input("""
-                Please choose a player.Type player's name.\n""") 
-                print("----------------------------------------")
+Please choose a player.Type player's name :
+-------------------------------\n>   """) 
                 if input_player in panthers:
                     panthers1, panthers2, panthers3, panthers4, panthers5, panthers6 = panthers_dict
                     if input_player == panthers1["name"]:
@@ -246,6 +253,7 @@ def start():
                 else:
                     no_player() 
             elif input_teams == 2: # --------------here starts the BANDITS team statistics-------------------
+                time.sleep(1)
                 print("""
 
                 Team {} Stats:
@@ -272,16 +280,20 @@ def start():
                     bandits_dict.insert(num, player_stats )
                     num +=1         
                 bandits_inline = " , ".join(bandits) 
+                time.sleep(1)
                 print_experience(team_experienced)
                 average_height = sum(team_height) / len(PLAYERS[6:12])
                 average_height = round(average_height,1)
+                time.sleep(1)
                 print("""Average height of the team: {} inches.
                 """.format(average_height))
+                time.sleep(1)
                 player_on_team()
+                time.sleep(1)
                 print(bandits_inline) 
                 input_player = input("""
-                Please choose a player.Type player's name.\n  """)
-                print("----------------------------------------")
+Please choose a player.Type player's name :
+-------------------------------\n>   """)
                 if input_player in bandits:
                     bandits1, bandits2, bandits3, bandits4, bandits5, bandits6 = bandits_dict
                     if input_player == bandits1["name"]:
@@ -307,6 +319,7 @@ def start():
                     no_player() 
 
             else:      # --------------here starts the WARRIORS team statistics-------------------
+                time.sleep(1)
                 print("""
 
                 Team {} Stats:
@@ -333,16 +346,20 @@ def start():
                     warriors_dict.insert(num, player_stats )
                     num +=1     
                 warriors_inline = " , ".join(warriors) 
+                time.sleep(1)
                 print_experience(team_experienced)
                 average_height = sum(team_height) / len(PLAYERS[6:12])
                 average_height = round(average_height,1)
+                time.sleep(1)
                 print("""Average height of the team: {} inches.
                 """.format(average_height))
+                time.sleep(1)
                 player_on_team()
+                time.sleep(1)
                 print(warriors_inline) 
                 input_player = input("""
-                Please choose a player. Type player's name.\n """)
-                print("----------------------------------------")         
+Please choose a player.Type player's name :
+-------------------------------\n>   """)       
                 if input_player in warriors:
                     warriors1, warriors2, warriors3, warriors4, warriors5, warriors6 = warriors_dict
                     if input_player == warriors1["name"]:
