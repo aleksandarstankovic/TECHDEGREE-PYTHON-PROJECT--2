@@ -13,8 +13,6 @@ Main focus and problem was, how should I approach and select the key:value pairs
 
 From that point I built up on that. 
 
-Knowing that it was not part of the task, anyway I added the posibility to type the name of the each player, and information from that player will pop up. I felt that without that part this project and application is not complete.
-
 I had problems with understanding how and when should I use DUNDER MAIN, but I think I got it good on the project, although I feel that I can improve a lot more in that.
 
 Also, I found a problem to distribute the players equaly to the teams based on their experiences, although I converted their experience "YES" and "NO" values to True and False. I resolved it with a little bit more advanced usage of "slices", example:
@@ -22,3 +20,4 @@ Also, I found a problem to distribute the players equaly to the teams based on t
    sliced_joined_players = PLAYERS[:3] + PLAYERS[8:11]
    for item in sliced_joined_players:
 
+For the very end, and for your pleasure, I added the possibility that after you type your player's name, all of his info pops up. It is just the thing that I thought was missing in this app and that we should allow the users to go deep into the player's information, and not just the team's.
