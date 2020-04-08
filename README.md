@@ -17,5 +17,8 @@ Knowing that it was not part of the task, anyway I added the posibility to type 
 
 I had problems with understanding how and when should I use DUNDER MAIN, but I think I got it good on the project, although I feel that I can improve a lot more in that.
 
-Also, I found a problem to distribute the players equaly to the teams based on their experiences, although I converted their experience "YES" and "NO" values to True and False.
+Also, I found a problem to distribute the players equaly to the teams based on their experiences, although I converted their experience "YES" and "NO" values to True and False. I resolved it with a little bit more advanced usage of "slices", example:
+  
+   sliced_joined_players = PLAYERS[:3] + PLAYERS[8:11]
+   for item in sliced_joined_players:
 
