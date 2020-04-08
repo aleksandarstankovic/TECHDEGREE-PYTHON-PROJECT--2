@@ -11,6 +11,8 @@ def player_height(player_height,item, team_height):
     player_height = int(player_height)
     team_height.append(player_height)
 
+
+
 def no_player():
     print("Sorry, we don't have this player in this team.")
     again_input = input("""
@@ -182,7 +184,7 @@ def start():
         except ValueError as error:
             if "invalid literal" in str(error):
                 print("""
-                Invalid input. Please try again by typing an integer number from 1-3. Thanks
+                Invalid data input! Please try again by typing an INTEGER number. Thanks
             """)
             else:
                 print(error)
@@ -200,9 +202,14 @@ def start():
                 panthers_dict = []
                 team_height = []
                 team_experienced = []
+                guardians = [] 
                 num=0
                 for item in PLAYERS[:6]:
                     player_name = item["name"] 
+                    player_guardians = item["guardians"]
+                    player_guardians_split = player_guardians.split()
+                    guardians.append(player_guardians)
+                    guardians_string = " , ".join(guardians)
                     player_experience = item["experience"]
                     if "YES" in player_experience:
                         player_experience = True
@@ -214,7 +221,9 @@ def start():
                     panthers.insert(num, player_name)
                     panthers_dict.insert(num, player_stats )
                     num +=1    
-                panthers_inline = " , ".join(panthers) 
+                panthers_inline = " , ".join(panthers)
+                print("Player's Guardians :") 
+                print(guardians_string)
                 time.sleep(1)
                 print_experience(team_experienced)
                 average_height = sum(team_height) / len(PLAYERS[:6])
@@ -227,7 +236,7 @@ def start():
                 time.sleep(1)
                 print("***",panthers_inline,"***")
                 input_player = input("""
-Please choose a player.Type player's name :
+For more info about the each player, type player's name :
 -------------------------------\n>   """) 
                 if input_player in panthers:
                     panthers1, panthers2, panthers3, panthers4, panthers5, panthers6 = panthers_dict
@@ -265,9 +274,14 @@ Please choose a player.Type player's name :
                 bandits_dict = []
                 team_height = []
                 team_experienced = []
+                guardians = []
                 num =0
                 for item in PLAYERS[6:12]:
                     player_name = item["name"]
+                    player_guardians = item["guardians"]
+                    player_guardians_split = player_guardians.split()
+                    guardians.append(player_guardians)
+                    guardians_string = " , ".join(guardians)
                     player_experience = item["experience"]
                     if "YES" in player_experience:
                         player_experience = True
@@ -280,6 +294,8 @@ Please choose a player.Type player's name :
                     bandits_dict.insert(num, player_stats )
                     num +=1         
                 bandits_inline = " , ".join(bandits) 
+                print("Player's Guardians :") 
+                print(guardians_string)
                 time.sleep(1)
                 print_experience(team_experienced)
                 average_height = sum(team_height) / len(PLAYERS[6:12])
@@ -292,7 +308,7 @@ Please choose a player.Type player's name :
                 time.sleep(1)
                 print(bandits_inline) 
                 input_player = input("""
-Please choose a player.Type player's name :
+For more info about the each player, type player's name :
 -------------------------------\n>   """)
                 if input_player in bandits:
                     bandits1, bandits2, bandits3, bandits4, bandits5, bandits6 = bandits_dict
@@ -331,9 +347,14 @@ Please choose a player.Type player's name :
                 warriors_dict = []
                 team_height = []
                 team_experienced = []
+                guardians = []
                 num =0
                 for item in PLAYERS[12:]:
                     player_name = item["name"]
+                    player_guardians = item["guardians"]
+                    player_guardians_split = player_guardians.split()
+                    guardians.append(player_guardians)
+                    guardians_string = " , ".join(guardians)
                     player_experience = item["experience"]
                     if "YES" in player_experience:
                         player_experience = True
@@ -346,6 +367,8 @@ Please choose a player.Type player's name :
                     warriors_dict.insert(num, player_stats )
                     num +=1     
                 warriors_inline = " , ".join(warriors) 
+                print("Player's Guardians :") 
+                print(guardians_string)
                 time.sleep(1)
                 print_experience(team_experienced)
                 average_height = sum(team_height) / len(PLAYERS[6:12])
@@ -358,7 +381,7 @@ Please choose a player.Type player's name :
                 time.sleep(1)
                 print(warriors_inline) 
                 input_player = input("""
-Please choose a player.Type player's name :
+For more info about the each player, type player's name :
 -------------------------------\n>   """)       
                 if input_player in warriors:
                     warriors1, warriors2, warriors3, warriors4, warriors5, warriors6 = warriors_dict
