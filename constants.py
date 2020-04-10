@@ -191,7 +191,7 @@ def start():
         else:
             time.sleep(1)    
             if input_teams == 1: # --------------here starts the PANTHERS team statistics-------------------
-                sliced_and_joined_players = PLAYERS[:3] + PLAYERS[8:11]
+                sliced_and_joined_players = PLAYERS[:3] + PLAYERS[9:12]
                 print("""
 
                 Team {} Stats:
