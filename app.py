@@ -92,15 +92,10 @@ while game_running1:
                         """.format(constants.TEAMS[0],len(sliced_and_joined_players)))
                         sliced_joined = constants.PLAYERS[:3] + constants.PLAYERS[9:12]
                         time.sleep(1)
-                        player_names = []
                         players_names = []
                         players_guardians = []
                         players_experiences = []
-                        player_height =[]
                         players_height = []
-                        average_height =[]
-                        join_names = []
-                        join_guardians = []
                         for item in sliced_joined:
                             #------------PLAYERS NAMES BLOCK-------------
                             player_names = item["name"]
@@ -144,13 +139,10 @@ while game_running1:
 
                         """.format(constants.TEAMS[1],len(constants.PLAYERS[3:9])))
                         time.sleep(1)
-                        player_names = []
                         players_names = []
                         players_guardians = []
                         players_experiences = []
                         players_height = []
-                        join_names = []
-                        join_guardians = []
                         for item in constants.PLAYERS[3:9]:
                         #------------PLAYERS NAMES BLOCK-------------
                             player_names = item["name"]
@@ -193,13 +185,10 @@ while game_running1:
 
                         """.format(constants.TEAMS[2],len(constants.PLAYERS[12:])))
                         time.sleep(1)
-                        player_names = []
                         players_names = []
                         players_guardians = []
                         players_experiences = []
                         players_height = []
-                        join_names = []
-                        join_guardians = []
                         for item in constants.PLAYERS[12:]:
                             #------------PLAYERS NAMES BLOCK-------------
                             player_names = item["name"]
