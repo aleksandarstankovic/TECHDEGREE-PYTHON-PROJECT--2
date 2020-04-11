@@ -10,7 +10,6 @@ def prints(players_experiences, average_height, join_names, join_guardians):
     print("\nAverage team height: ",average_height, "inches\n")            
     print("\nPlayer names: \n", "\n*** ",join_names)
     print("\nPlayer's guardians: \n", "\n*** ",join_guardians)
-
     
 
 print("""
@@ -19,9 +18,7 @@ print("""
         ----------------------------
 """)
 print("""
-
 ---- MENU ----
-
 """)
 
     
@@ -83,7 +80,6 @@ def start():
                         if input_teams == 1: # --------------here starts the PANTHERS team statistics-------------------
                             sliced_and_joined_players = constants.PLAYERS[:3] + constants.PLAYERS[9:12]
                             print("""
-
                             \nTeam {} Stats:
                             \n--------------------
                             \n\nTotal players : {}
@@ -130,7 +126,6 @@ def start():
                         elif input_teams == 2: 
                             time.sleep(1)
                             print("""
-
                             \nTeam {} Stats:
                             \n--------------------
                             \n\nTotal players : {}
@@ -175,7 +170,6 @@ def start():
                         else:
                             # --------------here starts the PANTHERS team statistics-------------------
                             print("""
-
                             \nTeam {} Stats:
                             \n--------------------
                             \n\nTotal players : {}
