@@ -8,18 +8,25 @@ def prints(players_experiences, average_height, join_names, join_guardians):
             \nNumber of inexperinced players: {}
             """.format(players_experiences.count(True),players_experiences.count(False)))  
     print("\nAverage team height: ",average_height, "inches\n")            
-    print("\nPlayer names: \n", "\n*** ",join_names)
-    print("\nPlayer's guardians: \n", "\n*** ",join_guardians)
+    print("""\nPlayers names:
+---------------\n --->>> """,join_names)
+    print()
+    print("""\nPlayer's guardians:
+-------------------\n --->>> """,join_guardians)
 
- 
-print("""
-        ----------------------------
-        BASKETBAL TEAM STATS TOOL
-        ----------------------------
-""")
-print("""
----- MENU ----
-""")
+
+def print_headline(): 
+    print("""
+            ----------------------------
+            BASKETBAL TEAM STATS TOOL
+            ----------------------------
+    """)
+    print("""
+    ---- MENU ----
+    """)
+
+if __name__ == "__main__":
+    print_headline()
 
     
 def start():
