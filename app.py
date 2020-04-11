@@ -10,8 +10,8 @@ def prints(players_experiences, average_height, join_names, join_guardians):
     print("\nAverage team height: ",average_height, "inches\n")            
     print("\nPlayer names: \n", "\n*** ",join_names)
     print("\nPlayer's guardians: \n", "\n*** ",join_guardians)
-    
 
+ 
 print("""
         ----------------------------
         BASKETBAL TEAM STATS TOOL
